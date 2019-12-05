@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { ThemeProvider, withTheme } from 'styled-components'
+import Home from './screens/Home'
+import { Store } from './utils/store'
+import rem from './styles/style-helpers'
+import variables from './styles/variables/colours.scss'
+import breakpoints from './styles/variables/breakpoints.scss'
+import './styles/global.scss'
 
 function App() {
+  const theme = {
+    ...variables,
+    ...breakpoints,
+    rem
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Store>
+      <ThemeProvider theme={withTheme(theme)}>
+        <Home />
+      </ThemeProvider>
+    </Store>
+  )
 }
 
-export default App;
+export default App

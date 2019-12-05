@@ -1,0 +1,10 @@
+$desktop : 769px;
+$maxWidth: 1280px;
+
+/* 
+converted to JS - for things like styled components 
+*/
+:export {
+    desktop: $desktop;
+    maxWidth: $maxWidth;
+}

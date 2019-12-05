@@ -1,0 +1,7 @@
+@import '../../styles/variables/colours.scss';
+@import '../../styles/mixins.scss';
+
+div {
+    color: $secondary;
+    padding: rem(10px);
+} 

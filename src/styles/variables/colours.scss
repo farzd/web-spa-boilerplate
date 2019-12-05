@@ -1,0 +1,22 @@
+$primary: #0583F2;
+$secondary: #1D2A73;
+$tertiary: #05AFF2;
+$text: #000000;
+$background: #ffffff;
+
+/*
+System colors
+*/
+$error: #90201a;
+
+/* 
+converted to JS - for things like styled components 
+*/
+:export {
+    primary: $primary;
+    secondary: $secondary;
+    tertiary: $tertiary;
+    text: $text;
+    background: $background;
+    error: $error;
+}
